@@ -31,7 +31,7 @@ def load_dataset(csv_file: str):
     anemia = df['All_Class']
 
     data = {
-        "Gender": gender.tolist(),
+        "GENDER": gender.tolist(),
         "RBC": rbc.tolist(),
         "HGB": hgb.tolist(),
         "HCT": hct.tolist(),
@@ -48,7 +48,7 @@ def load_dataset(csv_file: str):
         "FERRITTE": ferretine.tolist(),
         "FOLATE": folate.tolist(),
         "B12": b12.tolist(),
-        "Anemia": anemia.tolist(),
+        "ANEMIA": anemia.tolist(),
     }
 
     df = pd.DataFrame(data)
@@ -67,31 +67,31 @@ def load_cross_dataset_validation(dataset_csv_one: str, dataset_csv_two: str):
     anemia = df_one['All_Class']
 
     data = {
-        "Gender": gender.tolist(),
+        "GENDER": gender.tolist(),
         "HGB": hgb.tolist(),
         "MCV": mcv.tolist(),
         "MCH": mch.tolist(),
         "MCHC": mchc.tolist(),
-        "Anemia": anemia.tolist(),
+        "ANEMIA": anemia.tolist(),
     }
 
     df_one = pd.DataFrame(data)
 
     # DF_two
     df_two = pd.read_csv(dataset_csv_two)
-    gender = df_two['Gender']
+    gender = df_two['GENDER']
     hgb = df_two['Hemoglobin']
     mch = df_two['MCH']
     mchc = df_two['MCHC']
     mcv = df_two['MCV']
     anemia = df_two['Result']
     data = {
-        "Gender": gender.tolist(),
+        "GENDER": gender.tolist(),
         "HGB": hgb.tolist(),
         "MCV": mcv.tolist(),
         "MCH": mch.tolist(),
         "MCHC": mchc.tolist(),
-        "Anemia": anemia.tolist(),
+        "ANEMIA": anemia.tolist(),
     }
     df_two = pd.DataFrame(data)
 
@@ -133,7 +133,7 @@ def preprocess_data(df, target_column, preprocessor=None):
     return X_preprocessed, y, preprocessor
 
 
-def split_train_test_data(data_frame, y_class='Anemia', test_size=0.3):
+def split_train_test_data(data_frame, y_class='ANEMIA', test_size=0.3):
     # Preprocess the data
     X_preprocessed, y, preprocessor = preprocess_data(data_frame, target_column=y_class)
 
@@ -144,7 +144,7 @@ def split_train_test_data(data_frame, y_class='Anemia', test_size=0.3):
     return train_X, train_Y, test_X, test_Y, preprocessor
 
 
-def _split_train_test_data(data_frame, y_class='Anemia', test_size=0.3):
+def _split_train_test_data(data_frame, y_class='ANEMIA', test_size=0.3):
     data = data_frame
     train, test = train_test_split(data, test_size=test_size, random_state=0, stratify=data[y_class])
     train_X = train[train.columns[:-1]].values
@@ -152,6 +152,6 @@ def _split_train_test_data(data_frame, y_class='Anemia', test_size=0.3):
     test_X = test[test.columns[:-1]].values
     test_Y = test[test.columns[-1:]].values
     X = data[data.columns[:-1]]
-    Y = data['Anemia']
+    Y = data['ANEMIA']
     len(train_X), len(train_Y), len(test_X), len(test_Y)
     return train_X, train_Y, test_X, test_Y

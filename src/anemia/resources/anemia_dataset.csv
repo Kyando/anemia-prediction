@@ -1,4 +1,4 @@
-Gender,Hemoglobin,MCH,MCHC,MCV,Result
+GENDER,Hemoglobin,MCH,MCHC,MCV,Result
 1,14.9,22.7,29.1,83.7,0
 0,15.9,25.4,28.3,72,0
 0,9,21.5,29.6,71.2,1

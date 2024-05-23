@@ -3,6 +3,7 @@ import numpy as np
 import seaborn as sns
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 from sklearn.naive_bayes import GaussianNB
@@ -62,23 +63,26 @@ def plot_confusion_matrix(test_Y, y_pred, labels=["No Anemia", "Anemia"], model_
                           metrics_file="output/metrics.png"):
     # Plot confusion matrix
     conf_matrix = confusion_matrix(test_Y, y_pred)
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(conf_matrix, annot=True, fmt="d", cmap="Blues",
+    # Normalize confusion matrix to get percentages
+    conf_matrix_percentage = conf_matrix.astype('float') / conf_matrix.sum(axis=1)[:, np.newaxis]
+
+    plt.figure(figsize=(10, 8))
+    sns.set(font_scale=1)  # Increase font scale for better readability
+    sns.heatmap(conf_matrix_percentage, annot=True,
+                fmt=".3f",
+                cmap="Blues",
                 xticklabels=labels,
-                yticklabels=labels)
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-    plt.title(model_name)
+                yticklabels=labels, cbar=False, annot_kws={"size": 12})
+
+    # Set plot labels and title
+    plt.xlabel("Predicted", fontsize=16)
+    plt.ylabel("Actual", fontsize=16)
+    plt.title(model_name, fontsize=18)
     plt.savefig(output_file)
     plt.close()
 
     # Evaluate the model
     report = classification_report(test_Y, y_pred, target_names=labels, output_dict=True)
-    print(report)
-
-    # Create plot for metrics
-    # Evaluate the model
-    report = classification_report(test_Y, y_pred, target_names=labels)
     print(report)
 
     # Save the classification report as a text plot
@@ -89,3 +93,18 @@ def plot_confusion_matrix(test_Y, y_pred, labels=["No Anemia", "Anemia"], model_
     plt.axis('off')
     plt.savefig(metrics_file)
     plt.close()
+
+    accuracy = accuracy_score(test_Y, y_pred)
+    precision = precision_score(test_Y, y_pred, average='weighted')
+    recall = recall_score(test_Y, y_pred, average='weighted')  # Recall is the same as sensitivity
+    f1 = f1_score(test_Y, y_pred, average='weighted')
+
+    # Store the metrics in a list
+    model_metrics = {
+        "Name": model_name,
+        'Accuracy': accuracy,
+        'F1-Score': f1,
+        'Sensitivity': recall,
+        'Precision': precision,
+    }
+    return model_metrics

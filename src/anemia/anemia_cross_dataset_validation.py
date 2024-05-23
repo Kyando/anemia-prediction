@@ -13,11 +13,12 @@ if __name__ == '__main__':
     csv_file_one = "resources/anemia_disease.csv"
     csv_file_two = "resources/anemia_dataset.csv"
     df_one, df_two = data_utils.load_cross_dataset_validation(csv_file_one, csv_file_two)
-    df_one['Anemia'] = df_one['Anemia'].apply(lambda x: 1 if x > 0 else 0)
+    df_one['ANEMIA'] = df_one['ANEMIA'].apply(lambda x: 1 if x > 0 else 0)
+    df_two['ANEMIA'] = df_two['ANEMIA'].apply(lambda x: 1 if x == 0 else 1) # Invert GENDER attributes
     train_X, train_Y, test_X, test_Y, preprocessor = data_utils.split_train_test_data(data_frame=df_one, test_size=0.3,
-                                                                                      y_class="Anemia")
+                                                                                      y_class="ANEMIA")
 
-    x_two_preprocessed, y_two, _ = data_utils.preprocess_data(df_two, "Anemia", preprocessor)
+    x_two_preprocessed, y_two, _ = data_utils.preprocess_data(df_two, "ANEMIA", preprocessor)
 
     labels = ["No Anemia", "Anemia"]
     # labels = ["No_Anemia", "HGB_Anemia_Class", "Iron_anemia_Class", "Folate_anemia_class", "B12_Anemia_class"]
@@ -56,8 +57,8 @@ if __name__ == '__main__':
 
     train_X_B, train_Y_B, test_X_B, test_Y_B, preprocessor_B = data_utils.split_train_test_data(data_frame=df_two,
                                                                                                 test_size=0.3,
-                                                                                                y_class="Anemia")
-    x_one_preprocessed, y_one, _ = data_utils.preprocess_data(df_one, "Anemia", preprocessor_B)
+                                                                                                y_class="ANEMIA")
+    x_one_preprocessed, y_one, _ = data_utils.preprocess_data(df_one, "ANEMIA", preprocessor_B)
 
     model = "DecisionTree"
     model_name = "Dataset_B_DecisionTree_B"
