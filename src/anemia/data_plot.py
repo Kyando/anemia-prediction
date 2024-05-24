@@ -7,7 +7,7 @@ from pandas.plotting import table
 from src.anemia.utils import data_utils
 
 
-def plot_table(summary_df, output_file: str):
+def plot_table(summary_df, output_file: str, title=""):
     # Display the summary DataFrame
     print(summary_df)
     # Plotting the table
@@ -23,7 +23,7 @@ def plot_table(summary_df, output_file: str):
     for key, cell in tbl.get_celld().items():
         if key[0] == 0:
             cell.set_text_props(fontweight='bold')
-    plt.title('', fontsize=14)
+    plt.title(title, fontsize=14)
     plt.savefig(output_file)
 
 
@@ -51,6 +51,7 @@ if __name__ == '__main__':
     # plot_table_dataset_one()
     print("hello")
     metrics_values = json.loads(open("figures/model_metrics.json").read())
+    # metrics_values = json.loads(open("figures/model_metrics_two.json").read())
     model_values = []
     for value in metrics_values:
         model_values.append({
@@ -62,4 +63,5 @@ if __name__ == '__main__':
         })
 
     metrics_df = pd.DataFrame(model_values)
-    plot_table(metrics_df, "figures/table_models_metrics_classification_d1.png")
+    plot_table(metrics_df, "figures/table_models_metrics_classification_d1.png", title="Models performance on Test data")
+    # plot_table(metrics_df, "figures/table_models_metrics_classification_d2.png", title="Cross-Dataset Validation")

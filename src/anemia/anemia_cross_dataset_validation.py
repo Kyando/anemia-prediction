@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,7 +16,7 @@ if __name__ == '__main__':
     csv_file_two = "resources/anemia_dataset.csv"
     df_one, df_two = data_utils.load_cross_dataset_validation(csv_file_one, csv_file_two)
     df_one['ANEMIA'] = df_one['ANEMIA'].apply(lambda x: 1 if x > 0 else 0)
-    df_two['ANEMIA'] = df_two['ANEMIA'].apply(lambda x: 1 if x == 0 else 1) # Invert GENDER attributes
+    df_two['GENDER'] = df_two['GENDER'].apply(lambda x: 1 if x == 0 else 1)  # Invert GENDER attributes
     train_X, train_Y, test_X, test_Y, preprocessor = data_utils.split_train_test_data(data_frame=df_one, test_size=0.3,
                                                                                       y_class="ANEMIA")
 
@@ -44,8 +46,15 @@ if __name__ == '__main__':
     output_metrics_file = f"output/{model_name}_metrics.png"
 
     y_pred_two = trained_model.predict(x_two_preprocessed)
-    model_utils.plot_confusion_matrix(test_Y=y_two, y_pred=y_pred_two, labels=labels, model_name=model,
-                                      output_file=output_plot_file, metrics_file=output_metrics_file)
+    dataset_two_metrics = model_utils.plot_confusion_matrix(test_Y=y_two, y_pred=y_pred_two, labels=labels,
+                                                            model_name=model,
+                                                            output_file=output_plot_file,
+                                                            metrics_file=output_metrics_file,
+                                                            percentage=False
+                                                            )
+
+    with open("figures/model_metrics_2.json", "w") as metrics_json:
+        metrics_json.write(json.dumps([dataset_two_metrics], indent=2))
 
     plt.figure(figsize=(20, 10))
     plot_tree(trained_model, filled=True, feature_names=df_two.columns, class_names=labels, rounded=True)

@@ -60,15 +60,18 @@ def train_model(train_X, train_Y, test_X, test_Y, model_name="RandomForest", **k
 
 def plot_confusion_matrix(test_Y, y_pred, labels=["No Anemia", "Anemia"], model_name="model",
                           output_file="output/confusion_matrix.png",
-                          metrics_file="output/metrics.png"):
+                          metrics_file="output/metrics.png",
+                          plot_metrics_figure=False,
+                          percentage=True):
     # Plot confusion matrix
     conf_matrix = confusion_matrix(test_Y, y_pred)
     # Normalize confusion matrix to get percentages
-    conf_matrix_percentage = conf_matrix.astype('float') / conf_matrix.sum(axis=1)[:, np.newaxis]
+    if percentage:
+        conf_matrix = conf_matrix.astype('float') / conf_matrix.sum(axis=1)[:, np.newaxis]
 
     plt.figure(figsize=(10, 8))
     sns.set(font_scale=1)  # Increase font scale for better readability
-    sns.heatmap(conf_matrix_percentage, annot=True,
+    sns.heatmap(conf_matrix, annot=True,
                 fmt=".3f",
                 cmap="Blues",
                 xticklabels=labels,
@@ -85,14 +88,15 @@ def plot_confusion_matrix(test_Y, y_pred, labels=["No Anemia", "Anemia"], model_
     report = classification_report(test_Y, y_pred, target_names=labels, output_dict=True)
     print(report)
 
-    # Save the classification report as a text plot
-    plt.figure(figsize=(6, 2))
-    plt.title(model_name)
-    # plt.text(0.01, 0.5, str(model_name), {'fontsize': 12}, fontproperties='monospace')
-    plt.text(0.01, 0, str(report), {'fontsize': 10}, fontproperties='monospace')
-    plt.axis('off')
-    plt.savefig(metrics_file)
-    plt.close()
+    if plot_metrics_figure:
+        # Save the classification report as a text plot
+        plt.figure(figsize=(6, 2))
+        plt.title(model_name)
+        # plt.text(0.01, 0.5, str(model_name), {'fontsize': 12}, fontproperties='monospace')
+        plt.text(0.01, 0, str(report), {'fontsize': 10}, fontproperties='monospace')
+        plt.axis('off')
+        plt.savefig(metrics_file)
+        plt.close()
 
     accuracy = accuracy_score(test_Y, y_pred)
     precision = precision_score(test_Y, y_pred, average='weighted')

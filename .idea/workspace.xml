@@ -5,36 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c681d16d-1a3d-42c4-a080-5b3deddf53dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/anemia/data_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anemia/anemia_binary_classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_B_DecisionTree_B_confusion_matrix.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anemia/old_output/DecisionTree_tree.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/anemia/anemia_cross_dataset_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/anemia_cross_dataset_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/anemia_dataset_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/anemia_dataset_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_tree.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_tree.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/DecisionTree_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/DecisionTree_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/DecisionTree_tree.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/KNN_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/KNN_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/KNN_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/KNN_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/RandomForest_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/RandomForest_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/RandomForest_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/RandomForest_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/SVM_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/SVM_confusion_matrix.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/output/SVM_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/output/SVM_metrics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/resources/anemia_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/resources/anemia_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anemia/utils/data_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/utils/data_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/data_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/data_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/figures/model_metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_figures/model_metrics.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/figures/table_dataset_one_features.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_figures/table_dataset_one_features.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/figures/table_models_metrics_classification_d1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_figures/table_models_metrics_classification_d1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_A_DecisionTree_A_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_A_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_A_DecisionTree_A_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_A_DecisionTree_B_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_A_DecisionTree_B_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_A_DecisionTree_B_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_A_DecisionTree_B_tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/_Dataset_B_DecisionTree_A_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/_Dataset_B_DecisionTree_A_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_A_tree.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_B_DecisionTree_A_tree.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/Dataset_B_DecisionTree_B_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/Dataset_B_DecisionTree_B_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/DecisionTree_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/DecisionTree_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/DecisionTree_tree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/KNN_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/KNN_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/KNN_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/KNN_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/LogisticRegression_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/LogisticRegression_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/LogisticRegression_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/NaiveBayes_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/NaiveBayes_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/NaiveBayes_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/RandomForest_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/RandomForest_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/RandomForest_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/RandomForest_metrics.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/SVM_confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/SVM_confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anemia/output/SVM_metrics.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/old_output/SVM_metrics.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/anemia/utils/model_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/anemia/utils/model_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.anemia_binary_classifier.executor": "Debug",
     "Python.anemia_cross_dataset_validation.executor": "Debug",
     "Python.anemia_dataset_classifier.executor": "Debug",
     "Python.data_dengue_analysis.executor": "Debug",
@@ -71,18 +74,40 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/bruno/git/masters/masters-experiments/src/anemia/resources",
+    "last_opened_file_path": "/home/bruno/git/masters/masters-experiments/src/anemia",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/anemia/resources" />
       <recent name="$PROJECT_DIR$/src/anemia" />
+      <recent name="$PROJECT_DIR$/src/anemia/resources" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.anemia_cross_dataset_validation">
+  <component name="RunManager" selected="Python.data_plot">
+    <configuration name="anemia_binary_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="masters-experiments" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/anemia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/anemia/anemia_binary_classifier.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="anemia_cross_dataset_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
@@ -119,28 +144,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/anemia/anemia_dataset_classifier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="data_dengue_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="masters-experiments" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/scripts/data_dengue_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_plot" />
+        <item itemvalue="Python.anemia_binary_classifier" />
         <item itemvalue="Python.anemia_cross_dataset_validation" />
         <item itemvalue="Python.anemia_dataset_classifier" />
-        <item itemvalue="Python.data_plot" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.data_dengue_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -248,13 +251,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/anemia/anemia_cross_dataset_validation.py</url>
-          <line>81</line>
+          <line>90</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/anemia/anemia_cross_dataset_validation.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="33" />
+          <line>64</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

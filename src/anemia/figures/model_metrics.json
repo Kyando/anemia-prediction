@@ -1,44 +1,44 @@
 [
   {
-    "Name": "RandomForest",
-    "Accuracy": 0.9917211328976034,
-    "F1-Score": 0.9912839154809454,
-    "Sensitivity": 0.9917211328976034,
-    "Precision": 0.9917518177868868
-  },
-  {
-    "Name": "SVM",
-    "Accuracy": 0.9444444444444444,
-    "F1-Score": 0.9368205540051394,
-    "Sensitivity": 0.9444444444444444,
-    "Precision": 0.9449126280542957
-  },
-  {
-    "Name": "LogisticRegression",
-    "Accuracy": 0.9623093681917211,
-    "F1-Score": 0.9606214257303126,
-    "Sensitivity": 0.9623093681917211,
-    "Precision": 0.9604442423220956
-  },
-  {
     "Name": "DecisionTree",
-    "Accuracy": 0.99760348583878,
-    "F1-Score": 0.9975522128175766,
-    "Sensitivity": 0.99760348583878,
-    "Precision": 0.9976517608175757
+    "Accuracy": 1.0,
+    "F1-Score": 1.0,
+    "Sensitivity": 1.0,
+    "Precision": 1.0
   },
   {
     "Name": "KNN",
-    "Accuracy": 0.8751633986928105,
-    "F1-Score": 0.863938651295901,
-    "Sensitivity": 0.8751633986928105,
-    "Precision": 0.8604118593496327
+    "Accuracy": 0.9801742919389979,
+    "F1-Score": 0.9801652741779489,
+    "Sensitivity": 0.9801742919389979,
+    "Precision": 0.9801611785874295
+  },
+  {
+    "Name": "LogisticRegression",
+    "Accuracy": 0.99760348583878,
+    "F1-Score": 0.9976017665772986,
+    "Sensitivity": 0.99760348583878,
+    "Precision": 0.997612467663575
   },
   {
     "Name": "NaiveBayes",
-    "Accuracy": 0.8488017429193899,
-    "F1-Score": 0.8497323897907346,
-    "Sensitivity": 0.8488017429193899,
-    "Precision": 0.8509277603732088
+    "Accuracy": 0.8516339869281045,
+    "F1-Score": 0.8477742775822503,
+    "Sensitivity": 0.8516339869281045,
+    "Precision": 0.8527139054541958
+  },
+  {
+    "Name": "RandomForest",
+    "Accuracy": 1.0,
+    "F1-Score": 1.0,
+    "Sensitivity": 1.0,
+    "Precision": 1.0
+  },
+  {
+    "Name": "SVM",
+    "Accuracy": 0.9945533769063181,
+    "F1-Score": 0.9945530249434894,
+    "Sensitivity": 0.9945533769063181,
+    "Precision": 0.9945527749972193
   }
 ]
