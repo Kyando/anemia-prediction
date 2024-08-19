@@ -6,6 +6,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 
+
 def load_dataset(csv_file: str):
     df = pd.read_csv(csv_file)
     columns = df.columns.values
