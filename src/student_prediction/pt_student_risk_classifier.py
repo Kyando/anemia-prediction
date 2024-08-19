@@ -8,8 +8,6 @@ import utils.data_utils as data_utils
 import utils.model_utils as model_utils
 
 if __name__ == '__main__':
-    csv_file = "resources/anemia_disease.csv"
-
     dataset_path = "datasets/student-por.csv"
     df = pd.read_csv(dataset_path)
 
