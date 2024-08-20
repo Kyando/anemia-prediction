@@ -2,6 +2,7 @@ import json
 
 from sklearn.model_selection import LeaveOneOut, cross_val_score, StratifiedKFold
 from sklearn.compose import ColumnTransformer
+from sklearn.metrics import make_scorer, f1_score
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -20,7 +21,8 @@ if __name__ == '__main__':
     dataset_path = "datasets/student-por.csv"
     df = pd.read_csv(dataset_path)
     df["Approved"] = df["G3"].apply(lambda x: 1 if x >= 10 else 0)
-    df = df.drop(columns=["G3", "G2"])
+    # df = df.drop(columns=["G3", "G2", "G1"])
+    df = df.drop(columns=["G3", "G2",])
 
     X = df.drop(columns=["Approved"])
     y = df["Approved"].values
@@ -59,9 +61,12 @@ if __name__ == '__main__':
 
     # Cross-validation setup (Leave-One-Out Cross-Validation)
     loo = LeaveOneOut()
-    kf = StratifiedKFold(n_splits=100, shuffle=True, random_state=42)
+    kf = StratifiedKFold(n_splits=30, shuffle=True, random_state=42)
     cv = kf
+    # cv = loo
 
+    # Evaluation metric: F1 score focusing on the minority class (assuming it's labeled as 0)
+    scorer = make_scorer(f1_score, pos_label=1, zero_division=0)
     scores_json = {}
 
     # Evaluate each model using LOO-CV
@@ -74,9 +79,10 @@ if __name__ == '__main__':
         ])
 
         # Perform cross-validation
-        scores = cross_val_score(pipeline, X, y, cv=cv, scoring='accuracy')
+        scores = cross_val_score(pipeline, X, y, cv=cv, scoring=scorer)
+        # scores = cross_val_score(pipeline, X, y, cv=cv, scoring='accuracy')
         scores_json[name] = scores.tolist()
         print(f"{name}: {np.mean(scores):.4f} ± {np.std(scores):.4f}")
 
-    with open("metrics/loocv_metrics.json", "w") as metrics_json:
+    with open("metrics/30k_metrics_f1.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))
