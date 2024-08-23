@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c681d16d-1a3d-42c4-a080-5b3deddf53dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/metrics/loocv_metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_prediction/metrics/loocv_metrics.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/DecisionTree_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/DecisionTree_tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/KNN_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/LogisticRegression_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/NaiveBayes_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/RandomForest_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/output/SVM_confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student_prediction/student_cross-validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/student_prediction/student_cross-validation.py" afterDir="false" />
-    </list>
+    <list default="true" id="c681d16d-1a3d-42c4-a080-5b3deddf53dc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +38,7 @@
     "Python.data_plot.executor": "Debug",
     "Python.pt_student_risk_classifier.executor": "Debug",
     "Python.student_cross-validation.executor": "Debug",
+    "Python.student_cross-validation_metrics.executor": "Debug",
     "Python.student_loocv.executor": "Debug",
     "Python.utils.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -60,34 +51,13 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/student_prediction" />
+      <recent name="$PROJECT_DIR$/src/student_prediction/datasets" />
       <recent name="$PROJECT_DIR$/src/anemia" />
       <recent name="$PROJECT_DIR$/src/anemia/resources" />
       <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.student_cross-validation">
-    <configuration name="anemia_binary_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="masters-experiments" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/anemia" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/anemia/anemia_binary_classifier.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.student_cross-validation_metrics">
     <configuration name="data_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
@@ -177,6 +147,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="student_cross-validation_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="masters-experiments" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/student_prediction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/student_prediction/student_cross-validation_metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="student_loocv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
@@ -201,19 +193,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.student_cross-validation_metrics" />
       <item itemvalue="Python.student_cross-validation" />
       <item itemvalue="Python.student_loocv" />
-      <item itemvalue="Python.anemia_binary_classifier" />
       <item itemvalue="Python.data_plot" />
       <item itemvalue="Python.pt_student_risk_classifier" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.student_cross-validation_metrics" />
         <item itemvalue="Python.student_cross-validation" />
         <item itemvalue="Python.student_loocv" />
         <item itemvalue="Python.pt_student_risk_classifier" />
         <item itemvalue="Python.data_plot" />
-        <item itemvalue="Python.anemia_binary_classifier" />
       </list>
     </recent_temporary>
   </component>
@@ -257,6 +249,11 @@
           <url>file://$PROJECT_DIR$/src/student_prediction/student_loocv.py</url>
           <line>78</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/student_prediction/student_cross-validation_metrics.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

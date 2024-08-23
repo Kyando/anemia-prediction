@@ -17,14 +17,10 @@ W
 'src/student_prediction/student_loocv.py,b/4/b430797c6d0ed5702d1c9cf4c87812c6e2b0305e
 f
 6src/student_prediction/xapi_student_risk_classifier.py,7/f/7fac85c591da4f06ff18520e85b8c9c3f378fe5a
-a
-1src/student_prediction/metrics/loocv_metrics.json,8/b/8b72215992dbd1aa95ff8f6f527d64d3a4f105d7
 b
 2src/student_prediction/student_cross-validation.py,d/5/d5f8fda40551de123a52407c7f071793e82347c4
 j
 :src/student_prediction/student_cross-validation_metrics.py,7/8/78295b0f3795a57f949af9df3ebd904f6cef7792
-_
-/src/student_prediction/metrics/30k_metrics.json,f/e/fe1ccd08e72c045d8521c6ef41809755368a00fd
 b
 2src/student_prediction/metrics/G0_30k_metrics.json,e/f/efb78204ed1075a7fe0a2e5b313c3c9a1e363440
 b
@@ -37,3 +33,9 @@ _
 /src/student_prediction/datasets/student-mat.csv,0/b/0b3b49a090c787f2508052b4753b7725e31017d5
 c
 3src/student_prediction/student_binary_prediction.py,8/2/82051930d9b391c8a2bf13c7fe259c9b02cf7f78
+]
+-src/student_prediction/gan_data_generation.py,2/f/2f5d046c9c37e4a8462a2a85496d966c726b6308
+b
+2src/student_prediction/student_grade_prediction.py,1/e/1e184a91d47ba8019ac0faef448d628903295605
+a
+1src/student_prediction/metrics/model_metrics.json,f/3/f3fd79d65a715333b45d8387d8ee7583b997a443
