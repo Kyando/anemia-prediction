@@ -24,7 +24,7 @@ def train_model(train_X, train_Y, test_X, test_Y, model_name="RandomForest", **k
         C = kwargs.get('C', 1.0)
         kernel = kwargs.get('kernel', 'rbf')
         gamma = kwargs.get('gamma', 'scale')
-        model = SVC(C=C, kernel=kernel, gamma=gamma, random_state=42)
+        model = SVC(C=C, kernel=kernel, probability=True, gamma=gamma, random_state=42)
 
     elif model_name == "LogisticRegression":
         C = kwargs.get('C', 1.0)
@@ -66,16 +66,22 @@ def plot_confusion_matrix(test_Y, y_pred, labels=["No Anemia", "Anemia"], model_
     # Plot confusion matrix
     conf_matrix = confusion_matrix(test_Y, y_pred)
     # Normalize confusion matrix to get percentages
+
+    fmt = ".0f"
     if percentage:
         conf_matrix = conf_matrix.astype('float') / conf_matrix.sum(axis=1)[:, np.newaxis]
+        fmt = ".3f",
 
-    plt.figure(figsize=(10, 8))
-    sns.set(font_scale=1)  # Increase font scale for better readability
+
+
+    plt.figure(figsize=(10, 9))
+    sns.set(font_scale=1.8)  # Increase font scale for better readability
     sns.heatmap(conf_matrix, annot=True,
                 fmt=".3f",
+                # fmt=fmt,
                 cmap="Blues",
                 xticklabels=labels,
-                yticklabels=labels, cbar=False, annot_kws={"size": 12})
+                yticklabels=labels, cbar=False, annot_kws={"size": 16})
 
     # Set plot labels and title
     plt.xlabel("Predicted", fontsize=16)

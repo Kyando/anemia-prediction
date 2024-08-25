@@ -5,6 +5,54 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
+def load_multi_class_anemia_dataset(csv_file: str):
+    df = pd.read_csv(csv_file)
+    columns = df.columns.values
+    print(columns)
+    gender = df['GENDER']
+    rbc = df['RBC']
+    hgb = df['HGB']
+    hct = df['HCT']
+    mcv = df['MCV']
+    mch = df['MCH']
+    mchc = df['MCHC']
+    rdw = df['RDW']
+
+    plt = df['PLT']
+    mpv = df['MPV']
+    pdw = df['PDW']
+    sd = df['SD']
+    sdtsd = df['SDTSD']
+    tsd = df['TSD']
+    ferretine = df['FERRITTE']
+    folate = df['FOLATE']
+    b12 = df['B12']
+
+    anemia = df['All_Class']
+
+    data = {
+        "GENDER": gender.tolist(),
+        "RBC": rbc.tolist(),
+        "HGB": hgb.tolist(),
+        "HCT": hct.tolist(),
+        "MCV": mcv.tolist(),
+        "MCH": mch.tolist(),
+        "MCHC": mchc.tolist(),
+        "RDW": rdw.tolist(),
+        "PLT": plt.tolist(),
+        "MPV": mpv.tolist(),
+        "PDW": pdw.tolist(),
+        "SD": sd.tolist(),
+        "SDTSD": sdtsd.tolist(),
+        "TSD": tsd.tolist(),
+        "FERRITTE": ferretine.tolist(),
+        "FOLATE": folate.tolist(),
+        "B12": b12.tolist(),
+        "ANEMIA": anemia.tolist(),
+    }
+
+    df = pd.DataFrame(data)
+    return df
 
 
 def load_dataset(csv_file: str):
@@ -100,6 +148,7 @@ def load_cross_dataset_validation(dataset_csv_one: str, dataset_csv_two: str):
 
 
 def preprocess_data(df, target_column, preprocessor=None):
+    # Convert numerical categorical columns to category dtype
     # Separate features and target
     X = df.drop(columns=[target_column])
     y = df[target_column].values
