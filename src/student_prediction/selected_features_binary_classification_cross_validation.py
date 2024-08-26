@@ -24,8 +24,8 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 if __name__ == '__main__':
     # subject = "por"
-    subject = "mat"
-    # subject = "all"
+    # subject = "mat"
+    subject = "all"
     dataset_path = f"datasets/student-{subject}.csv"
     # dataset_path = "datasets/student-por.csv"
     df = pd.read_csv(dataset_path)
@@ -77,10 +77,9 @@ if __name__ == '__main__':
     # kf = KFold(n_splits=10, shuffle=True, random_state=42)
     cross_validation_list = []
     for i in range(20):
-        kf = KFold(n_splits=10, shuffle=True, random_state=i)
-        # kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
+        # kf = KFold(n_splits=10, shuffle=True, random_state=i)
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
         cross_validation_list.append(kf)
-    # cv = loo
 
     # Initialize lists to store results
 
@@ -96,7 +95,7 @@ if __name__ == '__main__':
             # Pipeline with SMOTE and model
             pipeline = ImbPipeline([
                 ('preprocessor', preprocessor),
-                # ('smote', SMOTE(random_state=i)),
+                ('smote', SMOTE(random_state=i)),
                 ('model', model)
             ])
 
@@ -174,9 +173,9 @@ if __name__ == '__main__':
         plt.title(f"{name} - Confusion Matrix")
         plt.xlabel("Predicted Label")
         plt.ylabel("True Label")
-        plt.savefig(f"output/fs_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
+        plt.savefig(f"output/fs_smote_stratify_{subject}_{name}_cv_confusion_matrix.png")
         plt.clf()
 
     # with open(f"metrics/imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
-    with open(f"metrics/fs_imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
+    with open(f"metrics/fs_smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))
