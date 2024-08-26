@@ -24,8 +24,8 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 if __name__ == '__main__':
     # subject = "por"
-    # subject = "mat"
-    subject = "all"
+    subject = "mat"
+    # subject = "all"
     dataset_path = f"datasets/student-{subject}.csv"
     # dataset_path = "datasets/student-por.csv"
     df = pd.read_csv(dataset_path)
@@ -64,12 +64,13 @@ if __name__ == '__main__':
 
     # List of models to evaluate
     models = {
-        'Decision Tree': DecisionTreeClassifier(),
-        'Random Forest': RandomForestClassifier(),
-        'KNN': KNeighborsClassifier(),
+        'Decision Tree': DecisionTreeClassifier(criterion='gini', max_depth=10, min_samples_split=10),
+        'Random Forest': RandomForestClassifier(max_depth=None, min_samples_split=10, n_estimators=100),
+        'KNN': KNeighborsClassifier(metric='euclidean', n_neighbors=9, weights='uniform'),
         'Naive Bayes': GaussianNB(),
-        'SVM': SVC(),
-        'Logistic Regression': LogisticRegression(max_iter=200),
+        'SVM': SVC(C=0.1, gamma='scale', kernel='linear'),
+        'Logistic Regression': LogisticRegression(max_iter=200, C=0.1, l1_ratio=0.5, penalty='elasticnet',
+                                                  solver='saga'),
     }
 
     # Cross-validation setup (Leave-One-Out Cross-Validation)
@@ -77,8 +78,8 @@ if __name__ == '__main__':
     # kf = KFold(n_splits=10, shuffle=True, random_state=42)
     cross_validation_list = []
     for i in range(20):
-        # kf = KFold(n_splits=10, shuffle=True, random_state=i)
-        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
+        kf = KFold(n_splits=10, shuffle=True, random_state=i)
+        # kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
         cross_validation_list.append(kf)
 
     # Initialize lists to store results
@@ -95,7 +96,7 @@ if __name__ == '__main__':
             # Pipeline with SMOTE and model
             pipeline = ImbPipeline([
                 ('preprocessor', preprocessor),
-                ('smote', SMOTE(random_state=i)),
+                # ('smote', SMOTE(random_state=i)),
                 ('model', model)
             ])
 
@@ -152,6 +153,20 @@ if __name__ == '__main__':
             for cls in np.unique(y)
         }
 
+        out_path = f"statistic_data/imb_{subject}_{name}_acc.json"
+        stats_data_dict = {
+            'accuracy': [],
+            'f1_0': [],
+            'f1_1': [],
+        }
+        for metric in metrics:
+            stats_data_dict['accuracy'].append(metric['accuracy'])
+            stats_data_dict['f1_0'].append(metric['0']['f1-score'])
+            stats_data_dict['f1_1'].append(metric['1']['f1-score'])
+
+        with open(out_path, "w") as out_file:
+            out_file.write(json.dumps(stats_data_dict, indent=2))
+
         # Display the average metrics
         for cls, cls_metrics in average_metrics.items():
             print(f"Class {cls} metrics:")
@@ -173,9 +188,10 @@ if __name__ == '__main__':
         plt.title(f"{name} - Confusion Matrix")
         plt.xlabel("Predicted Label")
         plt.ylabel("True Label")
-        plt.savefig(f"output/fs_smote_stratify_{subject}_{name}_cv_confusion_matrix.png")
+        # plt.savefig(f"output/gsa_fs_smote_stratify_{subject}_{name}_cv_confusion_matrix.png")
+        plt.savefig(f"output/gsa_fs_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
         plt.clf()
 
-    # with open(f"metrics/imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
-    with open(f"metrics/fs_smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
+    # with open(f"metrics/gsa_fs_smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
+    with open(f"metrics/gsa_fs_imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))

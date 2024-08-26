@@ -1,0 +1,10 @@
+dev-env
+.Dockerfile.swp
+__pycache__
+site-packages
+requirements_local.txt
+env
+secrets.yaml
+init*
+secrets*
+.idea*
