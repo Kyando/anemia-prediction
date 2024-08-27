@@ -23,8 +23,8 @@ from sklearn.datasets import fetch_openml
 from sklearn.metrics import classification_report, confusion_matrix
 
 if __name__ == '__main__':
-    subject = "por"
-    # subject = "mat"
+    # subject = "por"
+    subject = "mat"
     # subject = "all"
     dataset_path = f"datasets/student-{subject}.csv"
     # dataset_path = "datasets/student-por.csv"
@@ -64,24 +64,13 @@ if __name__ == '__main__':
 
     # List of models to evaluate
     models = {
-        'Decision Tree': DecisionTreeClassifier(criterion='gini', max_depth=10, min_samples_split=10),
-        'Random Forest': RandomForestClassifier(max_depth=None, min_samples_split=10, n_estimators=100),
-        'KNN': KNeighborsClassifier(metric='euclidean', n_neighbors=9, weights='uniform'),
+        'Decision Tree': DecisionTreeClassifier(),
+        'Random Forest': RandomForestClassifier(),
+        'KNN': KNeighborsClassifier(),
         'Naive Bayes': GaussianNB(),
-        'SVM': SVC(C=0.1, gamma='scale', kernel='linear'),
-        'Logistic Regression': LogisticRegression(max_iter=200, C=0.1, l1_ratio=0.5, penalty='elasticnet',
-                                                  solver='saga'),
+        'SVM': SVC(),
+        'Logistic Regression': LogisticRegression(),
     }
-
-    # List of models to evaluate
-    # models = {
-    #     'Decision Tree': DecisionTreeClassifier(),
-    #     'Random Forest': RandomForestClassifier(),
-    #     'KNN': KNeighborsClassifier(),
-    #     'Naive Bayes': GaussianNB(),
-    #     'SVM': SVC(),
-    #     'Logistic Regression': LogisticRegression(),
-    # }
 
     # Cross-validation setup (Leave-One-Out Cross-Validation)
     # loo = LeaveOneOut()
@@ -163,7 +152,7 @@ if __name__ == '__main__':
             for cls in np.unique(y)
         }
 
-        out_path = f"statistic_data/baseline_{subject}_{name}_acc.json"
+        out_path = f"paper_plots/statistic_data/baseline_{subject}_{name}_acc.json"
         stats_data_dict = {
             'accuracy': [],
             'f1_0': [],
@@ -199,10 +188,10 @@ if __name__ == '__main__':
         plt.xlabel("Predicted Label")
         plt.ylabel("True Label")
         # plt.savefig(f"output/gsa_fs_smote_stratify_{subject}_{name}_cv_confusion_matrix.png")
-        plt.savefig(f"output/baseline_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
+        plt.savefig(f"paper_plots/output/baseline_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
         # plt.savefig(f"output/gsa_fs_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
         plt.clf()
 
     # with open(f"metrics/gsa_fs_smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
-    with open(f"metrics/baseline_imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
+    with open(f"paper_plots/metrics/baseline_imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))

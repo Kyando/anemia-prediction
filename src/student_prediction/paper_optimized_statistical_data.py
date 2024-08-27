@@ -23,8 +23,8 @@ from sklearn.datasets import fetch_openml
 from sklearn.metrics import classification_report, confusion_matrix
 
 if __name__ == '__main__':
-    subject = "por"
-    # subject = "mat"
+    # subject = "por"
+    subject = "mat"
     # subject = "all"
     dataset_path = f"datasets/student-{subject}.csv"
     # dataset_path = "datasets/student-por.csv"
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     df = df.drop(columns=["G3", "G2", ])
 
     # Drop less relevant columns
-    # df = df.drop(columns=["Pstatus", "schoolsup", "famsup", "paid", "activities", "internet", ])
+    df = df.drop(columns=["Pstatus", "schoolsup", "famsup", "paid", "activities", "internet", ])
 
     X = df.drop(columns=["Approved"])
     y = df["Approved"].values
@@ -73,23 +73,13 @@ if __name__ == '__main__':
                                                   solver='saga'),
     }
 
-    # List of models to evaluate
-    # models = {
-    #     'Decision Tree': DecisionTreeClassifier(),
-    #     'Random Forest': RandomForestClassifier(),
-    #     'KNN': KNeighborsClassifier(),
-    #     'Naive Bayes': GaussianNB(),
-    #     'SVM': SVC(),
-    #     'Logistic Regression': LogisticRegression(),
-    # }
-
     # Cross-validation setup (Leave-One-Out Cross-Validation)
     # loo = LeaveOneOut()
     # kf = KFold(n_splits=10, shuffle=True, random_state=42)
     cross_validation_list = []
     for i in range(20):
-        kf = KFold(n_splits=10, shuffle=True, random_state=i)
-        # kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
+        # kf = KFold(n_splits=10, shuffle=True, random_state=i)
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=i)
         cross_validation_list.append(kf)
 
     # Initialize lists to store results
@@ -106,7 +96,7 @@ if __name__ == '__main__':
             # Pipeline with SMOTE and model
             pipeline = ImbPipeline([
                 ('preprocessor', preprocessor),
-                # ('smote', SMOTE(random_state=i)), #Balance the minor class
+                ('smote', SMOTE(random_state=i)), #Balance the minor class
                 ('model', model)
             ])
 
@@ -163,7 +153,7 @@ if __name__ == '__main__':
             for cls in np.unique(y)
         }
 
-        out_path = f"statistic_data/baseline_{subject}_{name}_acc.json"
+        out_path = f"paper_plots/statistic_data/optimized_{subject}_{name}_acc.json"
         stats_data_dict = {
             'accuracy': [],
             'f1_0': [],
@@ -199,10 +189,10 @@ if __name__ == '__main__':
         plt.xlabel("Predicted Label")
         plt.ylabel("True Label")
         # plt.savefig(f"output/gsa_fs_smote_stratify_{subject}_{name}_cv_confusion_matrix.png")
-        plt.savefig(f"output/baseline_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
+        plt.savefig(f"paper_plots/output/optimized_balanced_{subject}_{name}_cv_confusion_matrix.png")
         # plt.savefig(f"output/gsa_fs_imbalanced_{subject}_{name}_cv_confusion_matrix.png")
         plt.clf()
 
     # with open(f"metrics/gsa_fs_smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
-    with open(f"metrics/baseline_imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
+    with open(f"paper_plots/metrics/optimized_balanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))
