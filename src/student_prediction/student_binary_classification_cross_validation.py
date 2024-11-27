@@ -21,6 +21,7 @@ from imblearn.over_sampling import SMOTE
 from sklearn.datasets import fetch_openml
 
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 if __name__ == '__main__':
     # subject = "por"
@@ -88,20 +89,21 @@ if __name__ == '__main__':
         metrics = []
         confusion_matrices = []
 
+        best_f1 = 0
         for i, cv in enumerate(cross_validation_list):
-
-            # Pipeline with SMOTE and model
-            pipeline = ImbPipeline([
-                ('preprocessor', preprocessor),
-                ('smote', SMOTE(random_state=i)),
-                ('model', model)
-            ])
-
             # Perform custom cross-validation
             for train_idx, test_idx in cv.split(X, y):
+
                 # Split data
                 X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
                 y_train, y_test = y[train_idx], y[test_idx]
+
+                # Pipeline with SMOTE and model
+                pipeline = ImbPipeline([
+                    ('preprocessor', preprocessor),
+                    ('smote', SMOTE(random_state=i)),
+                    ('model', model)
+                ])
 
                 # Train the model
                 pipeline.fit(X_train, y_train)
@@ -116,6 +118,17 @@ if __name__ == '__main__':
                 # Compute confusion matrix
                 cm = confusion_matrix(y_test, y_pred)
                 confusion_matrices.append(cm)
+
+                f1_score = report['0']['f1-score']
+                if f1_score > best_f1:
+                    best_f1 = f1_score
+                    model_filename = f"models/{subject}_{name}.pkl"
+                    joblib.dump(pipeline, model_filename)
+
+                    print(f"Saved model {model_filename}")
+                    with open(f"models/{subject}_{name}_test.json", "w") as json_file:
+                        json_file.write(json.dumps(test_idx.tolist()))
+
 
         # Initialize dictionaries to store sums for averaging
         accuracy_sums = {cls: 0.0 for cls in np.unique(y)}
@@ -177,3 +190,5 @@ if __name__ == '__main__':
     # with open(f"metrics/imbalanced_{subject}_G1_10k_metrics.json", "w") as metrics_json:
     with open(f"metrics/smote_stratify_{subject}_G1_10k_metrics.json", "w") as metrics_json:
         metrics_json.write(json.dumps(scores_json, indent=2))
+
+# test_indexes = [2, 14, 25, 45, 59, 64, 77, 96, 109, 120, 123, 136, 137, 138, 140, 147, 158, 162, 173, 187, 204, 216, 223, 227, 229, 231, 234, 237, 243, 255, 296, 299, 303, 312, 332, 336, 354, 377, 390]
