@@ -41,7 +41,8 @@ if __name__ == '__main__':
 
     df = pd.read_csv(dataset_path)
     df["Approved"] = df["G3"].apply(lambda x: 1 if x >= 10 else 0)
-    df = df.drop(columns=["G3", "G2", ])
+    df = df.drop(columns=["G3", "G2"])
+    # df = df.drop(columns=["G3", "G2", "G1"])
 
     X = df.drop(columns=["Approved"])
     y = df["Approved"].values
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     # plt.savefig(f"plots/test_{test_instance_index}_shap_bar_plot.png")
     # plt.clf()
 
-    save_plots = False
+    save_plots = True
     top_10_features_list = []
     for idx, _ in enumerate(test_data):
         feature_item = {"index": idx,
@@ -107,7 +108,7 @@ if __name__ == '__main__':
             shap_features[feature] = float(shap_explanation.values[i])
 
         sorted_shap_features = sorted(shap_features.items(), key=lambda x: abs(x[1]), reverse=True)
-        sorted_shap_features = sorted_shap_features[:10]
+        sorted_shap_features = sorted_shap_features
         print(sorted_shap_features)
         feature_item['shap'] = sorted_shap_features
 
@@ -165,11 +166,11 @@ if __name__ == '__main__':
 
             # Sort features by absolute importance (but keep the original weights for plotting)
             sorted_importances = sorted(feature_importances.items(), key=lambda x: abs(x[1]), reverse=True)
-            lime_top_10 = sorted_importances[:10]
-            sorted_importances = sorted(lime_top_10, key=lambda x: abs(x[1]), reverse=False)
+            lime_top_importances = sorted_importances[:10]
+            sorted_importances = sorted(lime_top_importances, key=lambda x: abs(x[1]), reverse=False)
             features, weights = zip(*sorted_importances)
 
-            feature_item['lime'] = lime_top_10
+            feature_item['lime'] = lime_top_importances
 
             # Plot with positive/negative weights
             if save_plots:

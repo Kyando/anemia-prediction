@@ -5,34 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c681d16d-1a3d-42c4-a080-5b3deddf53dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/xai/lime_image_example_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e184a91d47ba8019ac0faef448d628903295605" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f5d046c9c37e4a8462a2a85496d966c726b6308" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34ebae4df731d8b9bfa7a5b56bc465dc748e3a84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/541351c9fdf3757c91af1636498bef77d3f0f894" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/541351c9fdf3757c91af1636498bef77d3f0f894" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78295b0f3795a57f949af9df3ebd904f6cef7792" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7fac85c591da4f06ff18520e85b8c9c3f378fe5a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82051930d9b391c8a2bf13c7fe259c9b02cf7f78" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b430797c6d0ed5702d1c9cf4c87812c6e2b0305e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c02ac9019fe957b0ddeedc89744569dadfd4d8a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d5f8fda40551de123a52407c7f071793e82347c4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efb78204ed1075a7fe0a2e5b313c3c9a1e363440" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3fd79d65a715333b45d8387d8ee7583b997a443" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb924360cfaffa4f19563ff0c1f832818f59fb53" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e184a91d47ba8019ac0faef448d628903295605" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/f/2f5d046c9c37e4a8462a2a85496d966c726b6308" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/4/34ebae4df731d8b9bfa7a5b56bc465dc748e3a84" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/8/78295b0f3795a57f949af9df3ebd904f6cef7792" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/f/7fac85c591da4f06ff18520e85b8c9c3f378fe5a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/2/82051930d9b391c8a2bf13c7fe259c9b02cf7f78" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/4/b430797c6d0ed5702d1c9cf4c87812c6e2b0305e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/0/c02ac9019fe957b0ddeedc89744569dadfd4d8a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/5/d5f8fda40551de123a52407c7f071793e82347c4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/f/efb78204ed1075a7fe0a2e5b313c3c9a1e363440" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/3/f3fd79d65a715333b45d8387d8ee7583b997a443" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/b/fb924360cfaffa4f19563ff0c1f832818f59fb53" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/xai/model_faithfulness_score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/lime_shap_student_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/xai/lime_shap_student_prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/model_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/xai/model_training.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/models/mat_xgboost.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/models/mat_xgboost_encoder.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/models/mat_xgboost_preprocessor.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/models/mat_xgboost_scaler.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/models/mat_xgboost_test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/test_0_lime_bar_plot_class_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/test_0_lime_bar_plot_class_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/test_0_shap_bar_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/test_305_shap_summary.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_10_pearson_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_10_spearman_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_1_spearman_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_3_pearson_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_3_spearman_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_5_pearson_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/plots/top_5_spearman_correlation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/top_10_features/test_data_features_ranked.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/xai/xai_features_correlation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/xai/xai_features_correlation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,36 +53,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.anemia_binary_classifier.executor": "Debug",
-    "Python.anemia_cross_dataset_validation.executor": "Debug",
-    "Python.anemia_dataset_classifier.executor": "Debug",
-    "Python.data_dengue_analysis.executor": "Debug",
-    "Python.data_plot.executor": "Debug",
-    "Python.pt_student_risk_classifier.executor": "Debug",
-    "Python.student_cross-validation.executor": "Debug",
-    "Python.student_cross-validation_metrics.executor": "Debug",
-    "Python.student_loocv.executor": "Debug",
-    "Python.utils.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/bruno/git/masters/anemia-prediction/src/xai",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.anemia_binary_classifier.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.anemia_cross_dataset_validation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.anemia_dataset_classifier.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.data_dengue_analysis.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.data_plot.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.lime_shap_student_prediction.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.lime_student_prediction.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.model_faithfulness_score.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.model_training.executor&quot;: &quot;Run&quot;,
+    &quot;Python.numpy_pickle.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.pt_student_risk_classifier.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.student_binary_classification_cross_validation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.student_cross-validation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.student_cross-validation_metrics.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.student_loocv.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.xai_features_correlation.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bruno/git/masters/masters-experiments/src/xai&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/xai" />
       <recent name="$PROJECT_DIR$/src/student_prediction" />
       <recent name="$PROJECT_DIR$/src/student_prediction/datasets" />
       <recent name="$PROJECT_DIR$/src/anemia" />
       <recent name="$PROJECT_DIR$/src/anemia/resources" />
-      <recent name="$PROJECT_DIR$/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.student_cross-validation_metrics">
-    <configuration name="data_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.model_training">
+    <configuration name="lime_shap_student_prediction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,11 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/anemia" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/xai" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/anemia/data_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/xai/lime_shap_student_prediction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,7 +133,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pt_student_risk_classifier" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="model_faithfulness_score" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,12 +142,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.8 (anemia-prediction)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/student_prediction" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/xai" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/student_prediction/pt_student_risk_classifier.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/xai/model_faithfulness_score.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,7 +155,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="student_cross-validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="model_training" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,11 +164,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/student_prediction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/xai" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/student_prediction/student_cross-validation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/xai/model_training.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="student_cross-validation_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="numpy_pickle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,11 +186,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/student_prediction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.venv/lib/python3.10/site-packages/joblib" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/student_prediction/student_cross-validation_metrics.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/.venv/lib/python3.10/site-packages/joblib/numpy_pickle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,7 +199,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="student_loocv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="xai_features_correlation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="masters-experiments" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,11 +208,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/student_prediction" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/xai" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/student_prediction/student_loocv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/xai/xai_features_correlation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -222,19 +223,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.student_cross-validation_metrics" />
-      <item itemvalue="Python.student_cross-validation" />
-      <item itemvalue="Python.student_loocv" />
-      <item itemvalue="Python.data_plot" />
-      <item itemvalue="Python.pt_student_risk_classifier" />
+      <item itemvalue="Python.model_faithfulness_score" />
+      <item itemvalue="Python.xai_features_correlation" />
+      <item itemvalue="Python.lime_shap_student_prediction" />
+      <item itemvalue="Python.model_training" />
+      <item itemvalue="Python.numpy_pickle" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.student_cross-validation_metrics" />
-        <item itemvalue="Python.student_cross-validation" />
-        <item itemvalue="Python.student_loocv" />
-        <item itemvalue="Python.pt_student_risk_classifier" />
-        <item itemvalue="Python.data_plot" />
+        <item itemvalue="Python.model_training" />
+        <item itemvalue="Python.lime_shap_student_prediction" />
+        <item itemvalue="Python.model_faithfulness_score" />
+        <item itemvalue="Python.xai_features_correlation" />
+        <item itemvalue="Python.numpy_pickle" />
       </list>
     </recent_temporary>
   </component>
@@ -276,6 +277,16 @@
           <url>file://$PROJECT_DIR$/src/student_prediction/student_cross-validation_metrics.py</url>
           <line>155</line>
           <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/xai/model_training.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/xai/model_training.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="137" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -81,6 +81,7 @@ if __name__ == "__main__":
     # df["Approved"]
     df["Approved"] = df["G3"].apply(lambda x: 1 if x >= 10 else 0)
     df = df.drop(columns=["G3", "G2"])
+    # df = df.drop(columns=["G3", "G2", "G1"])
 
     # Preprocess data
     X, y, preprocessor = preprocess_data(df)
